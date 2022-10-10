@@ -1,0 +1,1402 @@
+@charset "utf-8";
+@-webkit-keyframes fadeIn{0%{-webkit-transform:scale(1)}100%{-webkit-transform:scale(1.05)}}
+@-moz-keyframes fadeIn{0%{-moz-transform:scale(1)}100%{-moz-transform:scale(1.05)}}
+@keyframes fadeIn{
+	0%{-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);transform:scale(1)}
+	100%{-webkit-transform:scale(1.05);-moz-transform:scale(1.05);-ms-transform:scale(1.05);-o-transform:scale(1.05);transform:scale(1.05)}
+}
+/* -------------------------------------------------------------- 
+	Resets default browser CSS.
+	-------------------------------------------------------------- */
+
+	html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input
+	{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:"microsoft yahei";vertical-align:baseline;}
+	table, caption, tbody, tfoot, thead, tr, th, td
+	{margin:0;padding:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+	body {line-height:1.5;}
+	table {border-collapse:separate;border-spacing:0;}
+	caption, th, td {text-align:left;font-weight:normal;}
+	table, td, th {vertical-align:middle;}
+	blockquote:before, blockquote:after, q:before, q:after {content:"";}
+	blockquote, q {quotes:"" "";}
+	a img {border:none;}
+	input {border:none;}
+	ul{list-style:none;}
+	label{/*cursor:pointer;*/color:#666;}
+
+	body {font-size:75%;color:#222;background:#fff;font-family:Helvetica, Arial,"microsoft yahei", sans-serif;}
+	h1, h2, h3, h4, h5, h6 {font-weight:bold;color:#000;}
+	/*----- 2012��10��23�� ���ڴ���ͷ�ı�����ƻ��������µ���ʽʶ��������Ǹ�������  maqt  ��ʼ -----*/
+	h1 {font-size:36px;font-family:"microsoft yahei", sans-serif;}
+	/*----- ���� -----*/
+	h2 {font-size:45px;float:left;color:#CCC;margin-top:10px;font-weight:normal;}
+	h3 {font-size:16px;margin:8px 0;margin:8px 0 7px\0;color:#000;}
+	h4 {font-size:14px;margin:8px 0;color:#666;}
+	h5 {font-size:12px;margin:8px 0;color:#666;}
+	h6 {font-size:12px;margin:8px 0;}
+
+
+	h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+	p {color:#666;}
+	a:focus, a:hover {text-decoration:underline;}
+	a {
+		color:#666;
+		text-decoration:none;
+		cursor:pointer;
+		blr:expression(this.onFocus=this.blur());/*ie ȥ�����������߿� */
+		outline:none;/*ff ȥ�����������߿� */
+	}
+	span{color:#666;}
+	textarea{overflow:hidden;}
+	fieldset {padding:1.4em;margin:0 0 1.5em 0;border:1px solid #ccc;}
+	legend {font-weight:bold;font-size:1.2em;}
+
+	input.text:focus, input.title:focus, textarea:focus, select:focus {border:1px solid #666;}
+	input.text, input.title {width:300px;padding:5px;}
+	input.title {font-size:1.5em;}
+
+
+
+
+
+	input.text, input.title, textarea, select {margin:0 0;border:1px solid #dedede;font-size:12px;color:#666;font-family: Helvetica,Arial,"microsoft yahei",sans-serif;}
+	select{width:120px;float:left;padding:2px;height:25px;line-height:25px;}
+
+
+	/*-------------------------- 2013-01-12 ������ʽΪ��׼�泣����ʽ maqt ��ʼ -------------------------*/
+
+	/*--------------------base  css maqt start-------------------*/
+	.right{float:right !important;}
+	.row {float:left; width:100%;}
+	.left{float:left !important;}
+	.clear{clear:both;}
+	.overflow_hidden{overflow:hidden;clear:both;}
+	.display_block{display:block;}
+	.postion_relative{position: relative;}
+	.cursor_pointer{cursor: pointer!important;}
+	.bg_image_none{background-image: none !important;}
+	.text_overflow{overflow: hidden;white-space: nowrap;-o-text-overflow: ellipsis;text-overflow: ellipsis;}
+
+	.border_bottom{border-bottom:solid 1px #DEDEDE;}
+	.border_bottom_dash{border-bottom:dashed 1px #DEDEDE;}
+	.border_top{border-top:solid 1px #DEDEDE;}
+	.noborder{border:none !important;}
+	.border_top_none{border-top: none !important;}
+	.border_bottom_none{border-bottom: none !important;}
+
+	.margin_left_none{margin-left:0 !important;}
+	.margin_right_none{margin-right:0 !important;}
+	.margin_bottom_none{margin-bottom:0 !important;}
+	.margin_top_none{margin-top:0 !important;}
+	.padding_bottom_none{padding-bottom:0 !important;}
+
+
+	.graybold {font-weight:bold;}
+	.black{color:#000 !important;}
+	.blackbold {font-weight:bold;color:#000 !important;}
+	.black_333{color:#333333!important;}
+	.gray_666{color:#666666!important;}
+	.lightgray{color:#999 !important;}
+	.lightgray *{color:#999;}
+	.lightgray_ccc{color: #ccc;}
+
+
+	a.highlight, .highlight, .highlight a,a.blue{font-weight:normal;}
+	a.highlightheader{font-weight:bold;font-size:14px;}
+	a.bluebold, .bluebold ,a.navbar_titer{font-weight:bold;}
+
+
+	span.red {color:red;}
+	.script_red{color: #ff0000 !important;}
+	.orange{color:#f17842!important;}
+
+
+	.green{font-weight:normal;color:#390 !important;}
+	.greenbold{color:#390;font-weight:bold;}
+
+	/*--------------------base css   maqt  end-------------------*/
+
+
+	/*--------------------templet.css maqt start------------------*/
+
+	/*----- 3.������ɫ ��ʼ -------*/
+
+	a.highlight, .highlight, .highlight a{color:#09C !important;}
+	a.highlightheader{color:#09C;}
+	a.blue{color:#09C;}
+	a.bluebold, .bluebold ,a.navbar_titer{color:#09C;}
+	.dark_blue{color: #00607f !important;}
+	/*------- 3.������ɫ ����----------*/
+	
+	/*--------------------templet.css maqt end-----------------*/
+
+
+	/*----- 2014-11-18 字体图标样式 end   -----*/
+
+
+	/*登陆页样式  maqt 开始*/
+	.index{
+		overflow:hidden;
+		height:100%;
+		max-height:auto;
+		max-width:auto;
+	/*width:100%;
+	
+	font-family:"microsoft yahei";*/
+}
+.alert-text{
+	float:left;
+	width:100%;
+	margin:10px 0 0 105px;
+	font-size:12px;
+	line-height:1;
+	color:#de0000;
+}
+.login_conatiner{
+	height: 100%;
+   /* min-height:669px;
+   min-width: 1070px;*/
+   overflow:hidden;
+
+   position: relative;
+}
+.login_img_01{
+	
+	left: 0;
+/*   	min-height:600px;
+min-width: 960px;*/
+max-height:auto;
+max-width:auto;
+position: absolute;
+width:100%;
+top: 0;
+z-index: -1;
+overflow:hidden;
+-webkit-animation:fadeIn 5s forwards;
+-moz-animation:fadeIn 5s forwards;
+animation:fadeIn 5s forwards;
+}
+
+#login_main_conatiner{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	z-index:2;
+}
+.login_container_box{
+	position:relative;
+}
+.login_logo{
+	float:left;
+	margin:0 0 0 3px;
+}
+.login_logo_title{
+	float:left;
+	margin:0 0 0 3px;}
+	.login_logo_bg{
+		float:left;
+		background:url(../image/login_logo_bg.png) no-repeat;
+		width:205px;
+		height:306px;
+	}
+	.login_container_box .floor1{
+		width:650px;
+		height:100%;
+		display:table;
+		position:absolute;
+		left:5%;
+		top:0
+	}
+	.login_container_box .floor1 .logo{
+		display:block;
+		height:413px
+	}
+	.login_container_box .floor1 h1{
+		display:table-cell;
+		padding-left:5%
+	}
+	.login_container_box .floor1 .text{
+		display:block;
+	}
+	.login_container_box .floor1 .text>div{
+		display:table-cell;
+		vertical-align:middle;
+		padding-left:7%
+	}
+	.login_container_box .login_describe_p{
+		color:#FFF;
+		display:inline-block;
+		padding:0 1em;
+		margin:0 -1em;
+		font-size:34px;
+		width:643px;
+		height:59px;
+		line-height:59px;
+
+		background:-moz-linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.4) 40%, transparent 100%);
+		/* Firefox 3.6+ */ 
+		background: linear-gradient(left, transparent 0%, rgba(0,0,0,0.4) 10%,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.4) 40%, transparent 100%);
+		/*ie10*/
+		background:-ms-linear-gradient(left, transparent 0%, rgba(0,0,0,0.4) 10%,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.4) 40%, transparent 100%);
+		/* Safari 5.1+, Chrome 10+ */ 
+		background: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,0.4) 10%,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.4) 40%, transparent 100%); 
+		/* Opera 11.10+ */ 
+		background: -o-linear-gradient(left, transparent 0%, rgba(0,0,0,0.4) 10%,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.4) 40%, transparent 100%);
+		background: url(../image/shadow_bar_01.png) -30px 0 no-repeat\9;
+	}
+	.login_container_box .dp_02{
+		font-size:24px;
+		height:43px;
+		line-height:43px;
+		margin-top:10px;
+		width:437px;
+		background: url(../image/shadow_bar_02.png) 0 0 no-repeat\9;
+	}
+
+	.login_box_title{
+		margin-top:63px;
+		font-size:22px;
+		color:#333;
+		float:left;
+	}
+
+	.login_container_box .floor2{
+		position:absolute;
+		top:0;
+		right:5%;
+
+		width:298px;
+		height:100%;
+		padding:0 25px;
+		font-size:1.16em;
+		border:1px solid rgba(0,0,0,0.17);
+		border-top:none;
+		border-bottom:none;
+		background-color:rgba(255,255,255,0.6);
+
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccffffff,endColorstr=#ccffffff);
+
+	}
+	:root .login_container_box .floor2{
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#00000000);
+	}
+	.login_forget{
+		float:right;
+	}
+	.login_box_ul{
+		float:left;
+		width:100%;
+	}
+
+	.login_container_box>.floor2  .user_name{
+
+
+		height:50px;
+		line-height:50px;
+
+		border:1px solid #dedede;
+		border-radius:10px;
+		color:#cfcfcf;
+		width:296px;
+		float:left;
+		margin-top:15px;
+		background-color:#fff;
+
+	}
+	.login_text_01{
+		float:left;
+		width:225px;
+		height:50px;
+		line-height:50px;
+		border:none;
+		color:#999;
+	}
+	.login_container_box>.floor2 .auth_code_input{
+		width:166px;
+	}
+	.login_container_box>.floor2 .auth_code_img{
+		width:118px;
+		margin-left:10px;
+	}
+	.login_container_box>.floor2 .auth_code_input .login_text_01{
+		margin-left: 20px;
+		width: 126px;
+	}
+	.login_container_box>.floor2 .auth_code_img img{
+		width:78px;
+		margin-left: 20px;
+	}
+	.login_foget_bar{
+		float:left;
+		width:100%;
+		margin-top:11px;
+	}
+	.login_btn_01{
+		float:left;
+		background-color: #32a4c8;
+		border:#c7c7c7 1px solid;
+		border-radius: 10px;
+		color: #fff;
+		font-family: "microsoft yahei";
+		font-size: 16px;
+		height: 50px;
+		width:297px;
+		margin-top:12px;
+	}
+	.login_checkbox_01{
+		vertical-align:middle;
+		margin-top:2px;
+		width:18px;
+		height:18px;
+		margin-right:5px;
+		float:left;
+	}
+	.login_span_01{
+		float:left;
+		line-height:18px;
+	}
+	.login_notice{
+		float:left;
+		width:100%;
+		word-break:break-all;
+		word-wrap:break-word;
+		margin-top:15px;
+	}
+	.login_icon{
+		float:left;
+		margin:15px 20px 0 18px;}
+
+		.login_error{
+			float:right;
+			min-width:106px;
+			max-width:236px;
+			border:#ec94a2 1px solid;
+			height:26px;
+			line-height:26px;
+			border-radius:5px;
+			background-color:#f0aeb0;
+			margin-top:68px;
+			overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+		}
+		.login_error_border{
+			border:#ec94a2 1px solid!important;
+		}
+		.login_error_title{
+			float:right;
+			color:#9f090a;
+			text-align:right;
+			margin-right:10px;
+		}
+		.login_error_icon{
+			color:#f48281;
+			position:absolute;
+			z-index:100;
+			margin:5px 0 0 -14px;
+		}
+		.login_icon_bg{
+			background-color:#fff;
+			float:left;
+			width:9px;
+			height:11px;
+			margin:9px 0 0 11px;
+		}
+		.login_copyright{display:none;}
+		.third_party_box{
+			float:left;
+			width:100%;
+		}
+		.blue_line{
+			margin:16px 0 0;
+			height:1px;
+			width:100%;
+			background:rgba(50, 164, 200, 0.3)
+		}
+		.third_party_login{
+			float:left;
+			margin:20px 0 0 calc(50% - 45px);
+		}
+		.qq_login{
+			background-image:url(../image/qq-login.png);
+			width:28px;
+			height:28px;
+			display:block;
+			float:left;
+		}
+		.wechat_login{
+			background-image:url(../image/wechat-login.png);
+			width:34px;
+			height:28px;
+			display:block;
+			float:left;
+			margin-left:28px;
+		}
+		.qq_login:hover{
+			background-image:url(../image/qq-login-hover.png);
+			width:28px;
+			height:28px;
+		}
+		.wechat_login:hover{
+			background-image:url(../image/wechat-login-hover.png);
+			width:34px;
+			height:28px;
+		}
+
+
+		/* 2016-10-24 账号绑定样式 zhaosiqi start*/
+		.bind_bg {
+			background-color: #f2f2f2;
+		}
+		.bind_container {
+			position: relative;
+			height: 100%;
+			padding: 0 0 30px;
+			background-color: #f2f2f2;
+		}
+		.bind_container_top {
+			width: 100%;
+			height: 20px;
+			border-bottom: 1px solid #d8d8d8;
+			background-color: #fcfcfc;
+			box-shadow: 1px 0 0 1px #f4f4f4 inset;
+		}
+		.bind_logo {
+			position: absolute;
+			top: 0;
+			left: 60px;
+			width: 89px;
+			height: 146px;
+		}
+		.bind_logo_bg {
+			float: left;
+			width: 89px;
+			height: 146px;
+			background:url(../image/bind_logo_bg.png) no-repeat 0 0;
+		}
+		.bind_logo_pic {
+			float: left;
+			margin: 21px 0 0 15px;
+		}
+		.bind_logo_title {
+			float: left;
+			margin: 12px 0 0 15px;
+		}
+		.bind_main_container {
+			width: 420px;
+			margin: 0 auto;
+			padding: 0 15px;
+			overflow: hidden;
+		}
+		.bind_top {
+			float: left;
+			width: 100%;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #dedede;
+		}
+		.bind_top_title {
+			float: left;
+			width: 100%;
+			height: 52px;
+			line-height: 52px;
+			margin: 20px 0 10px;
+			font-size: 32px;
+		}
+		.bind_top_p {
+			float: left;
+			width: 100%;
+			height: 20px;
+			line-height: 20px; 
+		}
+		.bind_top_p span {
+			float: left;
+			height: 20px;
+			line-height: 20px; 
+			color: #999;
+			font-size: 14px;
+		}
+		.bind_top_p i {
+			/*float: left;*/
+			height: 20px;
+			line-height: 20px;
+			width: 20px;
+			margin-right: 10px;
+			font-size: 26px;
+			color: #cecece;
+		}
+		.bind_up {
+			float: left;
+			width: 82px;
+			margin: 0 168px;
+			padding: 14px 0 16px;
+		}
+		.bind_up_pic {
+			float: left;
+			width: 82px;
+			height: 82px;
+			/*margin-top: 14px;*/
+			border: 1px solid #dedede;
+			border-radius: 5px;
+		}
+		.bind_up_name {
+			float: left;
+			width: 100%;
+			height: 20px;
+			line-height: 20px;
+			margin: 6px 0 0;
+			font-size: 14px;
+			text-align: center;
+		}
+		.bind_refurbish {
+			float: left;
+			width: 100%;
+		}
+		.bind_refurbish_l {
+			width: 184px;
+			border-top: 1px solid #dedede;
+		}
+		.bind_refurbish_c {
+			float: left;
+			width: 24px;
+			margin: -10px 14px 0;
+		}
+		.bind_refurbish_c i {
+			float: left;
+			width: 24px;
+			margin-left: -6px;
+			font-size: 30px;
+			color: #c7c7c7;
+			text-align: center;
+		}
+		.bind_center {
+			float: left;
+			padding: 6px 60px 17px;
+			border-bottom: 1px solid #dedede;
+		}
+		.bind_center_title {
+			float: left;
+			width: 100%;
+			height: 24px;
+			line-height: 24px;
+			font-size: 14px;
+			color: #999;
+			text-align: center;
+		}
+		.bind_center .user_name {
+			float: left;
+			width: 296px;
+			height: 50px;
+			line-height: 50px;
+			margin: 15px 0 0;
+			border: 1px solid #dedede;
+			border-radius: 10px;
+			color: #cfcfcf;
+			background-color: #fff;
+		}
+		.bind_bottom {
+			float: left;
+			width: 100%;
+		}
+		.bind_bottom .login_span_01 {
+			margin-top: 36px;
+		}
+		.bind_bottom .login_checkbox_01 {
+			margin-top: 37px;
+		}
+		.bind_button {
+			width: 198px;
+			height: 52px;
+			line-height: 18px;
+			margin-top: 20px;
+			padding: 17px 0;
+			border-radius: 10px;
+			font-size: 18px;
+			text-align: center;
+			cursor: pointer;
+			-webkit-appearance:none;
+		}
+		.bind_button_1 {
+			border: 1px solid #01559d;
+			background-color: #01559d;
+			color: #fff;
+		}
+		.bind_button_2 {
+			border: 1px solid #cfcfcf;
+			background-color: #dadada;
+			color: #666;
+		}
+		@-moz-document url-prefix(){
+			.bind_button{
+				padding: 13px 0 21px;
+			}
+		}
+		/* 2016-10-24 账号绑定样式 zhaosiqi end*/
+		/* 2016-10-24 授权页样式 zhaosiqi start*/
+		.authorise_img {
+			float: left;
+			width: 184px;
+			height: 184px;
+			margin: 85px 0 0 118px;
+		}
+		.authorise_title {
+			float: left;
+			width: 100%;
+			height: 44px;
+			line-height: 44px;
+			margin-top: 20px;
+			text-align: center;
+			font-size: 32px;
+		}
+		.authorise_p {
+			float: left;
+			width: 100%;
+			height: 28px;
+			line-height: 28px;
+			margin-top: 6px;
+			font-size: 14px;
+			color: #999;
+		}
+		.authorise_p_point {
+			float: left;
+			width: 6px;
+			height: 28px;
+			margin-right: 9px;
+			background: url(../image/authorise_p_point.png) no-repeat left center;
+		}
+		.unauthorise_p {
+			float: left;
+			width: 100%;
+			height: 34px;
+			line-height: 34px;
+			margin-bottom: 8px;
+			font-size: 22px;
+			color: #999;
+			text-align: center;
+		}
+		/* 2016-10-24 授权页样式 zhaosiqi end*/
+
+		/* 2016-11-18 找回密码页样式 zhaosiqi start*/
+		.password_bg {
+			background-color: #f2f2f2;
+		}
+		.password_container {
+			position: relative;
+			height: 100%;
+			background-color: #f2f2f2;
+		}
+		.password_container_top {
+			width: 100%;
+			height: 20px;
+			border-bottom: 1px solid #d8d8d8;
+			background-color: #fcfcfc;
+			box-shadow: 1px 0 0 1px #f4f4f4 inset;
+		}
+		.password_logo {
+			position: absolute;
+			top: 0;
+			left: 60px;
+			width: 89px;
+			height: 146px;
+		}
+		.password_logo_bg {
+			float: left;
+			width: 89px;
+			height: 146px;
+			background:url(../image/bind_logo_bg.png) no-repeat 0 0;
+		}
+		.password_logo_pic {
+			float: left;
+			margin: 21px 0 0 15px;
+		}
+		.password_logo_title {
+			float: left;
+			margin: 12px 0 0 15px;
+		}
+		.password_main_container {
+			font-family: "Microsoft YaHei";
+			margin: 0 auto 33px auto;
+			max-width: 990px;
+			min-width: 750px;
+			padding: 0 20px;
+			width: 74%;overflow: hidden;box-sizing:border-box;
+		}
+		.password_title {
+			float: left;
+			width: 100%;
+			height: 100px;
+		}
+		.password_title span {
+			float: left;
+			height: 48px;
+			line-height: 48px;
+			margin-top: 19px;
+			font-size: 32px;
+			color: #666;
+		}
+		.password_nav {
+			position: relative;
+			float: left;
+			width: 100%;
+			height: 40px;
+			border-radius: 20px;
+			background: #c7c7c7;
+		}
+		.password_nav_bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 9998;
+			float: left;
+			height: 40px;
+			border-radius: 20px;
+			background: #3275af;
+		}
+		.password_nav_bg_1 {
+			width: calc((100%)/3 + 40px);
+		}
+		.password_nav_bg_2 {
+			width: calc((100%)/1.5 + 40px);
+		}
+		.password_nav_li {
+			position: relative;
+			z-index: 9999;
+			float: left;
+			width: calc((100%)/3);
+			height: 40px;
+			border-radius: 20px;
+			text-align: center;
+		}
+		.password_nav_active {
+			background: #01559d;
+		}
+		.password_nav_li i {
+			width: 22px;
+			height: 40px;
+		}
+		.password_nav_li span {
+			line-height: 40px;
+			color: #fff;
+			font-size: 16px;
+		}
+		.password_nav_li span:before {
+			content: "";
+			padding: 9px 11px;
+		}
+		.password_nav_1:before {
+			margin-right: 5px;
+			background: url(../image/password-nav-icon1.png) no-repeat center 12px;
+		}
+		.password_nav_2:before {
+			margin-right: 7px;
+			background: url(../image/password-nav-icon2.png) no-repeat center 12px;
+		}
+		.password_nav_3:before {
+			margin-right: 8px;
+			background: url(../image/password-nav-icon3.png) no-repeat center 12px;
+		}
+		.password_mask {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10000;
+			float: left;
+			width: 100%;
+			height: 40px;
+			border-radius: 20px;
+			background: url(../image/password-nav-bg.png) repeat-x left top;
+		}
+		.password_content {
+			float: left;
+			width: 100%;
+		}
+		.password_content_center {
+			width: 100%;
+			text-align: center;
+		}
+		.password_content_img {
+			margin-top: 52px;
+		}
+		.password_content_p {
+			height: 22px;
+			line-height: 22px;
+			margin-top: 22px;
+			margin-bottom: 55px;
+			font-size: 14px;
+			color: #333;
+		}
+		.password_content_left {
+			position: relative;
+			z-index: 1;
+			float: left;
+			width: 57%;
+		}
+		.password_content_right {
+			float: left;
+			width: 43%;
+		}
+		.password_content_right img {
+			float: left;
+			margin-top: 54px;
+		}
+		.password_form {
+			float: left;
+			width: 382px;
+			margin-top: 40px;
+			margin-left: 40px;
+			margin-bottom: 40px;
+		}
+		.password_form.margin_top_26 {
+			margin-top: 26px;
+		}
+		.password_form.margin_top_34 {
+			margin-top: 34px;
+		}
+		.password_form_list {
+			float: left;
+			width: 100%;
+			margin-bottom: 15px;
+		}
+		.password_form_list_label {
+			float: left;
+			width: 95px;
+			height: 40px;
+			line-height: 40px;
+			padding-right: 10px;
+			font-size: 12px;
+			font-weight: bold;
+			color: #666;
+			text-align: right;
+		}
+		.password_form_list select {
+			float: left;
+			width:277px;
+			height: 40px;
+			line-height: 38px;
+			padding: 0 9px;
+			border: 1px solid #d5d5d5;
+			border-radius: 3px;
+			background-color: #f9f9f9;
+		}
+		.password_form_list_input_1 {
+			float: left;
+			width: 257px;
+			height: 38px;
+			line-height: 38px;
+			padding: 0 9px;
+			border: 1px solid #d5d5d5;
+			border-radius: 3px;
+			background-color: #f9f9f9;
+		}
+		.password_form_list_input_2 {
+			float: left;
+			width: 83px;
+			height: 38px;
+			line-height: 38px;
+			padding: 0 9px;
+			border: 1px solid #d5d5d5;
+			border-radius: 3px;
+			background-color: #f9f9f9;
+		}
+		.password_form_list img {
+			float: left;
+			width: 84px;
+			height: 28px;
+			margin: 6px 10px;
+		}
+		.password_form_list a {
+			float: left;
+			height: 40px;
+			line-height: 40px;
+			font-size: 14px;
+			color: #32a4c8;
+		}
+		.password_form_p {
+			float: right;
+			width: 305px;
+			line-height: 18px;
+			margin: 6px 0 2px;
+			font-size: 12px;
+			color: #999;
+		}
+		.password_form_question {
+			float: left;
+			width: 305px;
+			height: 40px;
+			line-height: 40px;
+			padding-bottom: 2px;
+			font-size: 14px;
+			font-weight: bold;
+			color: #333;
+			overflow: hidden;
+		}
+		.password_form_title {
+			float: left;
+			width: 100%;
+			height: 22px;
+			line-height: 22px;
+			font-size: 14px;
+			color: #333;
+		}
+		.password_form_safe {
+			float: left;
+			width: 100%;
+			height: 22px;
+			margin-top: 9px;
+			margin-bottom: 26px;
+		}
+		.password_form_safe_1 {
+			float: left;
+			height: 22px;
+			line-height: 22px;
+			font-size: 14px;
+			color: #666;
+		}
+		.password_form_safe_2,.password_form_safe_3,.password_form_safe_4 {
+			float: left;
+			height: 16px;
+			line-height: 16px;
+			margin: 3px 0;
+			margin-left: 5px;
+			padding: 0 3px;
+			font-size: 12px;
+		}
+		.password_form_safe_2_color {
+			color: #b21313;
+			background-color: #ffa4a4;
+		}
+		.password_form_safe_3_color {
+			color: #a8900c;
+			background-color: #f8df57;
+		}
+		.password_form_safe_4_color {
+			color: #719600;
+			background-color: #cdf947;
+		}
+		.password_form_button {
+			width: 305px;
+			height: 52px;
+			line-height: 52px;
+			border-radius: 10px;
+			font-size: 18px;
+			text-align: center;
+			cursor: pointer;
+			-webkit-appearance:none;
+			font-family: "Microsoft YaHei";
+		}
+		.password_tips {
+			float: left;
+			border-top: 1px solid #dedede;
+			padding: 18px 0;
+			width:100%;
+		}
+		.password_tips i {
+			float: left;
+			width: 19px;
+			line-height: 22px;
+			margin-right: 7px;
+			color: #cecece;
+		}
+		.password_tips p {
+			float: right;
+			width: calc(100% - 26px);
+			line-height: 22px;
+			font-size: 14px;
+			color: #999;
+		}
+		.password_tab {
+			float: left;
+			height: 42px;
+			margin-top: 40px;
+			margin-left: 40px;
+			border: 1px solid #ddd;
+			border-right: 0;
+			border-radius: 3px;
+			background-color: #fff;
+		}
+		.password_tab li {
+			float: left;
+			height: 42px;
+			line-height: 42px;
+			border-right: 1px solid #ddd;
+			padding: 0 15px;
+			cursor: pointer;
+		}
+		.password_tab_active {
+			background-color: #f5f5f5;
+		}
+		.margin_top_5 {
+			margin-top: 5px!important;
+		}
+		/* 2016-11-18 找回密码页样式 zhaosiqi end*/
+
+/*@media screen and (max-width: 768px){.detail .course_schedule li:nth-of-type(3),.detail .course_schedule li:nth-of-type(4){margin-top:10px}.detail .course_schedule li:nth-of-type(2n){border:none}}
+@media screen and (max-width: 915px){.index .faq>div:last-child{display:none}.index .faq .txt{width:90%;padding-right:5%}.index .faq>div:first-child{width:100%}.index .about>div:last-child{display:none}.index .about .txt{width:90%;padding-right:5%}.index .about>div:first-child{width:100%}}
+@media screen and (max-width: 1070px){.index #content .title nav li{width:80px}}
+*/
+
+
+
+/*----- 2014-11-18 字体图标样式 strat   -----*/
+[class^="ii_"], [class*="ii_"] {
+	float:left;
+	line-height: 18px;
+}
+[class^="ii_"]:hover, [class*=" ii_"]:hover {
+	text-decoration:none!important;
+}
+.isz_12{
+	font-size: 12px !important;
+}
+.isz_14{
+	font-size: 14px !important;
+}
+.isz_16{
+	font-size: 16px !important;
+}
+.isz_17{
+	font-size: 17px!important;
+}
+.isz_18{
+	font-size: 18px!important;
+}
+.isz_20{
+	font-size: 20px !important;
+	line-height:20px !important;
+}
+.isz_22{
+	font-size: 22px !important;
+}
+.isz_23{
+	font-size: 23px !important;
+	line-height:23px !important;
+}
+.isz_24{
+	font-size: 24px !important;
+}
+.isz_28{
+	font-size: 28px !important;
+	line-height:28px !important;
+}
+.isz_36{
+	font-size: 36px !important;
+	line-height:36px !important;
+}
+.isz_38{
+	font-size: 38px !important;
+	line-height:38px !important;
+}
+.isz_40{
+	font-size: 40px !important;
+	line-height:40px !important;
+}
+/* 2016-11-18 找回密码页样式 zhaosiqi start*/
+	@media screen and (max-width: 1340px) {
+		.password_logo {
+			height: 138px;
+			left: 2.5%;
+	}
+	@media screen and (max-width: 1023px) {
+		.password_logo {
+			display: none;
+			height: 138px;
+			left: 20px;
+		}
+		.logo_light_1{
+			float:left;
+			width: 100%;
+			height:75px;
+			margin-top:14px;
+			background:url(../image/logo-dark-l.png) no-repeat center 0;
+			background-size:auto 70px;
+		}
+	}
+/* 2016-11-18 找回密码页样式 zhaosiqi end*/
+	@media screen and (max-width: 768px) {
+		.alert-text{
+			margin:10px 0 0 0;
+		}
+		#login_main_conatiner{
+			position:static;
+		}
+		.logo_light{
+			float:left;
+			width: 100%;
+			height:75px;
+			margin-top:0px;
+			background:url(../image/logo-dark-l.png) no-repeat center 0;
+			background-size:auto 70px;
+		}
+		.login_container_box .floor1{display:none;}
+		.login_container_box .floor2{
+			width: 100%;
+			float: left;
+			padding: 20px;
+			border-radius: 5px;
+			position:static;
+			box-sizing:border-box;
+			height:380px!important;
+			border:none;
+		}
+		.login_conatiner{
+			padding:10px;
+			float:left;
+			box-sizing:border-box;
+		}
+		.login_box_title{
+			margin-top:0;
+		}
+		.login_checkbox_01{
+			margin-top: 0;
+		}
+		.login_error{
+			margin-top:0;
+		}
+		.login_container_box>.floor2 .user_name{
+			width:100%;
+			margin-top: 10px;
+		}
+		.login_container_box>.floor2 .user_name{
+			height:38px;
+		}
+		.login_container_box>.floor2 .auth_code_input{
+			width:calc( 100% - 116px );
+		}
+		.login_container_box>.floor2 .auth_code_input .login_text_01{
+			width:calc( 100% - 20px );
+			margin-left:10px;
+		}
+		.login_container_box>.floor2 .auth_code_img{
+			width:102px;
+		}
+		.login_container_box>.floor2 .auth_code_img img{
+			width:62px;
+		}
+		.login_text_01{
+			height: 38px;
+			line-height:40px;
+			width:calc(100% - 55px);
+		}
+		.login_btn_01{
+			height:30px;
+			font-size: 12px;
+			width: 100%;
+			margin-top: 10px;
+			border-radius: 6px;
+		}
+		.login_notice{
+			margin-top: 10px;
+		}
+		.login_icon{
+			margin: 10px 20px 0 10px;
+		}
+		.login_copyright{
+			float: left;
+			word-break: break-all;
+			word-wrap: break-word;
+			margin-top: 10px;
+		}
+
+		.third_party_box{
+			float:left;
+			width:100%;
+		}
+		.blue_line{
+			margin:12px 0 0;
+			height:1px;
+			width:100%;
+			background:rgba(50, 164, 200, 0.3)
+		}
+		.third_party_login{
+			float:left;
+			margin:10px 0 0 calc(50% - 33px);
+		}
+		.qq_login{
+			background-image:url(../image/qq-login.png);
+			width:20px;
+			height:20px;
+			display:block;
+			float:left;
+			background-size:100%;
+		}
+		.wechat_login{
+			background-image:url(../image/wechat-login.png);
+			width:25px;
+			height:20px;
+			display:block;
+			float:left;
+			margin-left:20px;
+			background-size:100%;
+		}
+		.qq_login:hover{
+			background-image:url(../image/qq-login.png);
+			width:20px;
+			height:20px;
+		}
+		.wechat_login:hover{
+			background-image:url(../image/wechat-login.png);
+			width:25px;
+			height:20px;
+		}
+		/*授权页 zhaosiqi start*/
+		.bind_container .logo_light {
+			margin-top: 10px;
+		}
+		.bind_container_top {
+			display: none;
+		}
+		.bind_logo {
+			display: none;
+		}
+		.bind_top_title {
+			margin: 0;
+		}
+		.bind_text_01 {
+			width:225px;
+			height:50px;
+			line-height:50px;
+		}
+		.bind_icon{
+			float:left;
+			margin:15px 20px 0 18px;
+		}
+		.authorise_img {
+			margin-top: 0;
+		}
+		/*授权页 zhaosiqi end*/
+		/*2016-11-21 找回密码页 zhaosiqi start*/
+		.password_title {
+			height: 38px;
+		}
+		.password_title span {
+			height: 28px;
+			line-height: 28px;
+			margin-top: 0;
+			font-size: 16px;
+		}
+		.password_content_right {
+			display: none;
+		}
+		.password_content_left {
+			width: 100%;
+		}
+		.password_form {
+			float: none;
+			width: 100%;
+			overflow: hidden;
+			margin: 20px auto;
+		}
+		.password_nav_li span {
+			font-size: 14px;
+		}
+		.password_nav_li span::before {
+			margin-right: 0;
+			background-size: 80%;
+		}
+		.password_form_list {
+			width: calc(100% - 20px);
+			padding: 0 10px;
+			margin-bottom: 0;
+		}
+		.password_form_list_label {
+			width: calc(100% - 10px);
+			text-align: left;
+		}
+		.password_form_list_input_1 {
+			width: calc(100% - 20px);
+		}
+		.password_form_list select {
+			width: calc(100%);
+		}
+		.password_form_button {
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			margin-top: 20px!important;
+			border-radius: 6px;
+			font-size: 12px;
+		}
+		.password_tab {
+			margin-top: 20px;
+			margin-left: 0;
+		}
+		.password_form_p {
+			float: left;
+		}
+		.password_form_safe {
+			margin: 9px 0;
+		}
+		.password_main_container{
+			min-width:0;
+			width:100%;
+
+		}
+		.test_3{
+			width: 100%!important;
+		}
+		.selectpick_div_box {
+			width: 100%!important;
+		}
+		/*2016-11-21 找回密码页 zhaosiqi end*/
+	}
+	@media screen and (max-width: 450px) {
+		/*授权页 zhaosiqi start*/
+		.bind_main_container {
+			width: calc( 100% - 30px );
+		}
+		.bind_up {
+			margin: 0 calc(50% - 41px);
+		}
+		.bind_top_title {
+			font-size: 22px;
+		}
+		.bind_refurbish_l {
+			width: calc(50% - 26px);
+		}
+		.bind_center {
+			padding-left: 0;
+			padding-right: 5px;
+		}
+		.bind_center .user_name {
+			width:100%;
+			margin-top: 10px;
+		}
+		.bind_center .user_name {
+			height: 38px;
+		}
+		.bind_text_01{
+			height: 38px;
+			line-height:40px;
+			width: calc( 100% - 55px );
+		}
+		.bind_icon{
+			margin: 10px 20px 0 10px;
+		}
+		.bind_bottom .login_checkbox_01, .bind_bottom .login_span_01 {
+			margin-top: 20px;
+		}
+		.bind_button {
+			width: 100%;
+			height: 38px;
+			padding: 8px 0;
+			border-radius: 5px;
+		}
+		@-moz-document url-prefix(){
+			.bind_button{
+				padding: 7px 0 9px;
+			}
+		}
+		.authorise_img {
+			width: 150px;
+			height: 150px;
+			margin: 0 calc( 50% - 75px);
+		}
+		.authorise_title {
+			font-size: 22px;
+		}
+		.authorise_button {
+			width: calc( 50% - 13px);
+		}
+		.unauthorise_p {
+			font-size: 18px;
+		}
+		/*授权页 zhaosiqi end*/
+	}

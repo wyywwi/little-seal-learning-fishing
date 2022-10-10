@@ -1,0 +1,170 @@
+.table-list-con {
+	width: 960px;
+	padding: 0 20px 20px;
+	background-color: #fff;
+	float: left;
+	font-family: "Microsoft YaHei UI";
+}
+.table-listpop-title {
+	padding-bottom: 8px;
+	border-bottom: solid 1px #CCC;
+	line-height: 22px;
+	color: #333;
+	text-align: left;
+	margin: 16px 0 0;
+}
+.table-list-box {
+	margin: 20px 0 0;
+	border: 1px solid #dedede;
+	border-bottom: none;
+	width: 100%;
+	float: left;
+}
+.table-list-title {
+	width: 100%;
+}
+.table-list-title th {
+	margin: 0;
+	height: 26px;
+	padding: 2px 10px;
+	line-height: 26px;
+	text-align: center;
+	border-right: 1px solid #0165b2;
+	border-bottom: 1px solid #dedede;
+	font-size: 12px;
+	color: #fff;
+	background-color: #2379BC;
+	font-weight: bold;
+}
+.table-list-line {
+	width: 100%;
+	border-bottom: 1px solid #dedede;
+}
+.table-list-line td {
+	margin: 0;
+	height: 26px;
+	padding: 2px 10px;
+	line-height: 26px;
+	border-right: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	font-size: 12px;
+	color: #666;
+}
+.table-list-line.n_list_even {
+	background-color: #fdfdfd;
+}
+.text-left {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.border-right-none {
+	border-right: none!important;
+}
+/*----- 2014-12-15 大翻页 start -----*/
+.page_01_left,.page_01_right{
+float: left;
+height: 24px;
+font-size:12px;
+}
+.page_01_right{
+float: right;
+}
+.page_num,.page_num_first,.page_num_last{
+float: left;
+background-color: #fff;
+height: 22px;
+line-height: 22px;
+border-width:1px;
+border-style:solid;
+border-color:#dedede;
+border-radius: 4px;
+overflow: hidden;
+font-size: 12px;
+padding: 0 6px;
+
+}
+.page_num,.page_num_last{
+font-weight: bold;
+color:#666;
+text-decoration:none;
+}
+.page_num:hover,.page_num_last:hover{
+font-weight: bold;
+color:#666;
+border-color:#0165b2;
+text-decoration:none;
+}
+.page_num.active{
+color:#fff;
+border-color:#0165b2;
+text-decoration:none;
+background-color:#2379BC;
+}
+.page_num:hover,.page_num_first:hover,.page_num_last:hover{
+text-decoration: none;
+}
+.page_num:focus,.page_num_first:focus,.page_num_last:focus{
+text-decoration: none;
+}
+.page_01_left .page_num,.page_01_left .page_01_label{
+margin-right: 4px;
+}
+.page_01_right .page_num,.page_01_right .page_num_first,.page_01_right .page_num_last,.page_01_right .page_01_label{
+margin-left: 4px;
+}
+.page_01_label{
+float: left;
+height: 24px;
+line-height: 24px;
+}
+.page_num_input{
+float: left;
+width: 26px;
+height: 22px;
+line-height: 22px;
+padding: 0 3px;
+border: 1px solid #dedede;
+border-radius: 4px;
+margin: 0 3px;
+text-align: center;
+font-weight: bold;
+color: #666;
+}
+.page_define_btn{
+margin-left: 8px;
+}
+.page-box{
+	width:100%;
+	float:left;
+	margin:10px 0 0;
+	}
+.btn_style_02{ 
+background-color: #efefef; 
+border-color: #bbb; 
+color: #666; 
+} 
+.btn_style_02:hover,.btn_style_02:active{ 
+background-color: #dedede; 
+border-color: #aaa;
+text-decoration: none;
+} 
+.n_btn_02{ 
+height: 24px;
+line-height:20px;
+padding: 0 10px; 
+border-radius: 3px; 
+}
+a.n_btn_02{line-height:24px;}
+[class*="n_btn_0"] {
+    float: left;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    overflow: visible;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+}
