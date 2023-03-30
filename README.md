@@ -32,8 +32,6 @@
 
 4. 新生设备上页面自动导航为预先设定的静态博客页面。
 
-   ![image-20220813221010092](https://s2.loli.net/2022/08/13/8HwqsUbSg6OexGK.png)
-
 5. 游戏流程结束。
 
 6. 补充：可使用解密脚本对密码进行解密。
@@ -54,15 +52,15 @@
 2. 调整花生壳内网穿透参数（随网络环境变化而变化）；
 3. 开启花生壳内网穿透。
 
-## 5. 备忘录
+## 5. 其他
 
-钓鱼网站公网网址：https://57u585q613.zicp.fun/
+钓鱼网站公网网址：
 
 钓鱼网站本地位置：/var/www/SmartHUST/
 
-重定向指向页面：https://wyywwi.github.io/post/forfreshman/
+重定向指向页面：
 
-海报设计：https://www.canva.cn/design/DAFJNAM6-ps/uLgqHySeFrxGIRhYrcrG0Q/edit?utm_content=DAFJNAM6-ps&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+海报设计：
 
 解密JavaScript脚本位置：/home/kali/Downloads/
 
